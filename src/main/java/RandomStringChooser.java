@@ -5,9 +5,16 @@ public class RandomStringChooser
 
   public RandomStringChooser(String [] x){
     arr = new ArrayList<String>();
-    for(int i =0; i <x.length;i++){
-      arr.add();
+    for(String n : x){
+      arr.add(n);
     }
+  }
+
+  public String getNext(){
+    if(arr.size()==0)
+      return "NONE";
+    int i = (int)(Math.random*arr.size());
+    return arr.remove(i);
   }
   
   //Heads up! 
